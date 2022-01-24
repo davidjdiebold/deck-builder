@@ -24,7 +24,7 @@ public class CardComparatorByRate implements Comparator<Card>
     @Override
     public int compare(final Card o1, final Card o2)
     {
-        //HACK
+        //HACK for lands
         if(o1.getExtraDefinitiveMana()>0&&o1.getCost()==7)
         {
             return -1;

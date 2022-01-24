@@ -78,10 +78,7 @@ public class CompositeDomain implements Domain
             for (int i = 0; i < index; i++)
             {
                 _iterators[i] = _domains[i].buildIterator();
-               // if(i>0)
-                //{
-                    _iterators[i].next();
-                //}
+                _iterators[i].next();
             }
             
             for(int i = 0 ; i < ret.length ; i++)

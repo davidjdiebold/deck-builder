@@ -17,15 +17,6 @@ public class UseCaseAnalyseCurve
 {
     private final CardPowers powers;
     private final Configuration _configuration;
-//    = new double[]{
-//            0.6711571793465727,
-//            0.9333820038347093,
-//            1.295913862916746,
-//            1.575412564144247,
-//            2.230871837172894,
-//            2.1406264147640983,
-//            2.94404316462099,
-//            2.902586612573223};
 
     public UseCaseAnalyseCurve(final CardPowers powers, Configuration configuration)
     {
@@ -42,7 +33,6 @@ public class UseCaseAnalyseCurve
 
         for(int i = 5 ; i < 15 ; i++)
         {
-//            System.out.println("Turn : " + i);
             UseCaseOptimizeManaCurve usc = new UseCaseOptimizeManaCurve(new Library(),
                     new ArrayList<Card>(), i, builder, random, 400, null, _configuration);
             Stat[] evaluate = usc.evaluate(curve);

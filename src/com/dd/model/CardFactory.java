@@ -5,13 +5,6 @@ package com.dd.model;
  */
 public class CardFactory
 {
-    public Card newDummy(String name)
-    {
-        Card ret = new CardImpl();
-        ret.setName(name);
-        return ret;
-    }
-
     public Card newAoe(String name, int cost, int aoeDmg)
     {
         Card spell = new CardImpl();

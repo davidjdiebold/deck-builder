@@ -11,6 +11,7 @@ public class ModelScores
     
     private Set<Record> _scores = new LinkedHashSet<Record>();
 
+    //kryo
     public ModelScores()
     {
     }

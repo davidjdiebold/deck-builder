@@ -27,7 +27,6 @@ public class OptimizerResultsView implements View
     private JButton _remove;
 
     private CardListView _forcedCards;
-    //private ManacurveView _curve;
     private JTable _table;
 
     private JPanel _panel = new JPanel(new GridBagLayout());
@@ -129,8 +128,6 @@ public class OptimizerResultsView implements View
             }
         });
 
-        //_curve = new ManacurveView();
-
         if(_data.getUseCases().size()>0)
         {
             _table.getSelectionModel().setSelectionInterval(0,0);
@@ -183,7 +180,6 @@ public class OptimizerResultsView implements View
 
         JLabel details = ComponentFactory.createLabel(builder.toString());
         details.setFont(new Font(details.getFont().getName(), details.getFont().getStyle(), details.getFont().getSize()+3));
-        //details.setBorder(BorderFactory.createTitledBorder("Details"));
 
         JPanel runsPanel = new JPanel(new GridBagLayout());
         runsPanel.setBorder(BorderFactory.createTitledBorder("Decks"));
@@ -205,7 +201,6 @@ public class OptimizerResultsView implements View
 
         _panel.removeAll();
         _panel.add(runsPanel, new GridBagConstraints(0, 0, 1, 1, 1, 1, CENTER, BOTH, MainFrame.MEDIUM_INSETS, 0, 0));
-        //_panel.add(details, new GridBagConstraints(0, 1, 1, 1, 1, 1, CENTER, BOTH, MainFrame.FINE_INSETS, 0, 0));
         _panel.add(pane, new GridBagConstraints(0, 2, 1, 1, 100, 100, CENTER, BOTH, MainFrame.MEDIUM_INSETS, 0, 0));
         _panel.add(_forcedCards.getComponent(), new GridBagConstraints(1, 0, 1, 3, 1, 100, CENTER, BOTH, MainFrame.MEDIUM_INSETS, 0, 0));
     }
@@ -258,7 +253,6 @@ public class OptimizerResultsView implements View
     private void selectRow(final int row)
     {
         Manacurve curve = (Manacurve) getUseCase().getResults().getResults().keySet().toArray()[row];
-        //_curve.setCurve(curve);
         _panel.revalidate();
         _panel.repaint();
     }
@@ -276,7 +270,6 @@ public class OptimizerResultsView implements View
     @Override
     public void enter()
     {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public UseCaseOptimizeManaCurve getUseCase()

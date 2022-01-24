@@ -23,11 +23,6 @@ public class History
     public void addAction(HistorizedAction action)
     {
         _actions.add(action);
-        //HACK PERFS ?
-        if(_debug)
-        {
-            System.out.println(action.getDescription());
-        }
     }
 
     public List<HistorizedAction> listActions()

@@ -74,7 +74,6 @@ public class WebPanel
         try
         {
             _url = urlMode.createURL(path);
-            //JOptionPane.showMessageDialog(null,_url.getPath());
         }
         catch (MalformedURLException e)
         {
@@ -119,10 +118,7 @@ public class WebPanel
                         Set<Node> deadSeaScrolls = webView.lookupAll(".scroll-bar");
                         for (Node scroll : deadSeaScrolls)
                         {
-                            //if (scroll.toString().contains("ScrollBarSkin[id=null, styleClass=scroll-bar]"))
-                            //{
                             scroll.setVisible(true);
-                            //}
                         }
                     }
                 });
@@ -143,19 +139,6 @@ public class WebPanel
                 _webEngine.load(_url.toString());
             }
         });
-
-//        while(!_loaded)
-//        {
-//            try
-//            {
-//                Thread.sleep(500);
-//            }
-//            catch (InterruptedException e)
-//            {
-//                e.printStackTrace();
-//            }
-//
-//        }
     }
 
     protected void onEvent(final Worker.State t1)
@@ -175,8 +158,6 @@ public class WebPanel
 
         //Liens simples
         if (false) {
-                        // note next classes are from org.w3c.dom domain
-
                     Document doc = _webEngine.getDocument();
             if(doc==null)
             {

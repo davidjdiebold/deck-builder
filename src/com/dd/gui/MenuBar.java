@@ -73,7 +73,7 @@ public class MenuBar implements IMenuBar
     @Override
     public int getCurrentView()
     {
-        return 0;  //To change body of implemented methods use File | Settings | File Templates.
+        return 0;
     }
 
     public void initialize()

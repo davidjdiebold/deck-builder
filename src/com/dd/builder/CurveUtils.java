@@ -16,14 +16,6 @@ public class CurveUtils
     {
         Manacurve floatCurve = floatNormalize(curve, minimum, maximum, configuration);
 
-//        Manacurve uncaped = toXCards(curve, initialSum);
-//        Manacurve caped = cap(uncaped, maxCards);
-//
-//        double capedSum = getCapedSum(caped, maxCards);
-//        double uncapedSum = getUncapedSum(caped, maxCards);
-//        Manacurve floatCurve = normalizeCaped(caped, maxCards, capedSum, uncapedSum);
-        
-
         double sumFloor = 0;
         SortedSet<IndexAndDouble> map = new TreeSet<IndexAndDouble>();
         for(int i = 0 ; i < curve.getMaxCost() ; i++)
@@ -82,19 +74,6 @@ public class CurveUtils
 
         return ret; 
     }
-    
-    
-
-    private static Manacurve normalizeCaped(Manacurve caped, Manacurve maxCards, double capedSum, double uncapedSum, Configuration configuration)
-    {
-        Manacurve ret = caped.copy();
-        for(int i = 0 ; i < caped.getMaxCost() ; i++)
-        {
-            double count = maxCards.getCount(i) > configuration.getDeckSize() ? caped.getCount(i) * (configuration.getDeckSize() - capedSum) / uncapedSum : caped.getCount(i);
-            ret.setCount(i, count);
-        }
-        return ret;
-    }
 
     private static Manacurve toXCards(Manacurve curve, Manacurve imposed, Configuration configuration)
     {
@@ -122,44 +101,6 @@ public class CurveUtils
         }
         return ret;
     }
-
-    private static Manacurve cap(Manacurve curve, Manacurve max)
-    {
-        Manacurve ret = curve.copy();
-        for(int i = 0 ; i < curve.getMaxCost() ; i++)
-        {
-            ret.setCount(i, Math.min(curve.getCount(i), max.getCount(i)));
-        }
-        return ret;
-    }
-
-    private static double getCapedSum(Manacurve curve, Manacurve max, Configuration configuration)
-    {
-        double sum = 0.;
-        for(int i = 0 ; i < curve.getMaxCost() ; i++)
-        {
-            if(max.getCount(i)< configuration.getDeckSize())
-            {
-                sum += curve.getCount(i);
-            }
-        }
-        return sum;
-    }
-
-    
-    private static double getUncapedSum(Manacurve curve, Manacurve max, Configuration configuration)
-    {
-        double sum = 0.;
-        for(int i = 0 ; i < curve.getMaxCost() ; i++)
-        {
-            if(max.getCount(i)>configuration.getDeckSize())
-            {
-                sum += curve.getCount(i);
-            }
-        }
-        return sum;
-    }
-    
 
     static class IndexAndDouble implements Comparable<IndexAndDouble>
     {

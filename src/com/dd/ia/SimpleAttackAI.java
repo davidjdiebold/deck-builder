@@ -24,8 +24,6 @@ public class SimpleAttackAI implements PlayerAI
     {
         Player opponent = game.getOpponent(player);
 
-        //int timeToPlayAll = computeTimeToPlayAllCards()
-
         if (getArmyPower(player.listMinionsOnBoard(false)) >= opponent.getLife())
         {
             for (Card minion : player.listMinionsOnBoard(true))
@@ -53,7 +51,7 @@ public class SimpleAttackAI implements PlayerAI
                 owners.addAll(findOwningCreatures(_available, _notDealtWith));
                 boolean riskToDieSoon = getArmyPower(_notDealtWith) * turnsToPlayHand >= player.getLife();
                 Set<Card> tradeableCreatures = findTradeableCreatures(_available, _notDealtWith, riskToDieSoon);
-                //On ne cherche que � avoir du card advantage si on a assez de points de vie
+                //If we have enough life, we only look for card advantage
                 if (!owners.isEmpty() && (!riskToDieSoon))
                 {
                     Card owner = owners.iterator().next();

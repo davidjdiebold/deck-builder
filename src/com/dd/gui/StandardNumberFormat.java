@@ -7,9 +7,9 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
 public class StandardNumberFormat {
-    public static int _minDecimalDigits = 2;//TODO mettre �a en membre et le configurer dans le BasicComponentConfiguration
+    public static int _minDecimalDigits = 2;//Todo configure in BasicComponentConfiguration
 
-    public static int _optionalDecimalDigits = 5;//TODO mettre �a en membre et le configurer dans le BasicComponentConfiguration
+    public static int _optionalDecimalDigits = 5;//Todo configure in BasicComponentConfiguration
 
     public static DecimalFormat getDecimalFormat(int minDecimalDigits, int optionalDecimalDigits) {
         DecimalFormat formateurNombres = (DecimalFormat) DecimalFormat.getNumberInstance();
@@ -25,8 +25,6 @@ public class StandardNumberFormat {
         pattern += new String(optionalDecimalPart);
 
         formateurNombres.applyPattern((pattern));
-       // formateurNombres.setGroupingSize(3);
-        //formateurNombres.setGroupingUsed(true);
 
         return formateurNombres;
     }

@@ -85,7 +85,6 @@ public class OptimizerParametersView
         _turn.setToolTipText(Help.TURN);
 
         _games = new JSlider(100,1000,550);
-        //_games.setExtent(100);
         _games.setPaintLabels(true);
         Dictionary<Integer,JComponent> dic2 = new Hashtable<Integer, JComponent>();
         dic2.put(100,ComponentFactory.createLabel("Low"));
@@ -105,8 +104,6 @@ public class OptimizerParametersView
     {
         int index = 0;
         _panel.removeAll();
-        //_panel.add(ComponentFactory.createLabel("Deck Name"), new GridBagConstraints(0,index,1,1,1,1,WEST,NONE, MainFrame.FINE_INSETS,0,0));
-        //_panel.add(_name, new GridBagConstraints(1,index++,1,1,1,1, WEST, NONE, MainFrame.FINE_INSETS,0,0));
         _panel.add(ComponentFactory.createLabel("Hero Power"), new GridBagConstraints(0,index,1,1,1,1, WEST, NONE, MainFrame.FINE_INSETS,0,0));
         _panel.add(_heroPower, new GridBagConstraints(1,index++,1,1,1,1, WEST, NONE, MainFrame.FINE_INSETS,0,0));
         _panel.add(ComponentFactory.createLabel("Peak Turn"), new GridBagConstraints(0,index,1,1,1,1,WEST,NONE, MainFrame.FINE_INSETS,0,0));

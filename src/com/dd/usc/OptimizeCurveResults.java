@@ -20,11 +20,6 @@ public class OptimizeCurveResults
         return _results;
     }
 
-    public void setResults(final Map<Manacurve, Stat> results)
-    {
-        _results = results;
-    }
-
     public int getAdvancement()
     {
         return _advancement;

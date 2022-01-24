@@ -93,7 +93,7 @@ public class CardListView {
             for (Integer i : _selection.values()) {
                 count += i;
             }
-            //TODO INVALIDER LE BOUTON SI JAMAIS
+            //Todo Invalidate button ?
             if (count <= _data.getConfiguration().getDeckSize()) {
                 _selection.put(card, val);
             }

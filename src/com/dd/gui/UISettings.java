@@ -10,16 +10,6 @@ public class UISettings
     {
     }
 
-    public String getSelectedDeck()
-    {
-        return _selectedDeck;
-    }
-
-    public void setSelectedDeck(final String selectedDeck)
-    {
-        _selectedDeck = selectedDeck;
-    }
-
     public int getSelectedTab()
     {
         return _selectedTab;

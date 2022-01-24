@@ -9,7 +9,5 @@ import com.dd.model.Deck;
  */
 public interface DeckBuilder
 {
-    public static final int DECK_SIZE = 30;
-
     public void fill(Deck deck);
 }

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// shameful copy-paste of internet
 public class AutoFocusSpinner
 {
     public static final SelectOnFocusGainedHandler SHARED_INSTANCE = new SelectOnFocusGainedHandler();
@@ -21,10 +22,6 @@ public class AutoFocusSpinner
         JComponent spinnerEditor = spinner.getEditor();
 
         if (spinnerEditor != null) {
-
-            // This is me spending a few days trying to make this work and
-            // eventually throwing a hissy fit and just grabbing all the
-            // JTextComponent components contained within the editor....
             List<JTextComponent> lstChildren = findAllChildren(spinner, JTextComponent.class);
             if (lstChildren != null && lstChildren.size() > 0) {
 

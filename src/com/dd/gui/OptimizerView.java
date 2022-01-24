@@ -28,7 +28,6 @@ public class OptimizerView implements View
     private CardListView _cards;
 
     private JProgressBar _progressBar;
-    private WebPanel _advertisment;
 
     private JButton _launchOptimization;
     private JButton _cancelOptimization;
@@ -82,12 +81,7 @@ public class OptimizerView implements View
             }
         });
 
-        _advertisment = new WebPanel(Urls.ADVERTISEMENT, WebPanel.URL_MODE.INTERNET, true);
-        _advertisment.initialize();
-
         _progressBar = new JProgressBar();
-        //_progressBar.setMaximumSize(_dim);
-        //_progressBar.setMinimumSize(_dim);
         _progressBar.setPreferredSize(_dim);
         _progressBar.setStringPainted(true);
         _progressBar.setBorderPainted(true);
@@ -108,18 +102,14 @@ public class OptimizerView implements View
         _panel.add(_cards.getComponent(), new GridBagConstraints(1,0,1,1,1,100,CENTER,BOTH,MainFrame.MEDIUM_INSETS,0,0));
         JPanel panel = new JPanel(new GridBagLayout());
 
-        _advertisment.initialize();
-
         if(isOptimizing)
         {
 
             panel.setMaximumSize(_dim);
             panel.setMinimumSize(_dim);
 
-            //_advertisment.initialize();
             _progressBar.setMaximumSize(new Dimension(2000,20));
-            panel.add(_advertisment.getPanel(), new GridBagConstraints(0,0,1,2,100,100,CENTER,BOTH,new Insets(0,0,0,0),0,0));
-            panel.add(_progressBar, new GridBagConstraints(1,0,1,1,1,1,CENTER,BOTH,new Insets(0,0,0,0),0,0));
+            panel.add(_progressBar, new GridBagConstraints(0,0,1,2,100,100,CENTER,BOTH,new Insets(0,0,0,0),0,0));
             panel.add(_cancelOptimization, new GridBagConstraints(1,1,1,1,1,3,CENTER,BOTH,new Insets(0,0,0,0),0,0));
 
             _panel.add(panel, new GridBagConstraints(0,1,2,1,1,1,CENTER,BOTH,MainFrame.MEDIUM_INSETS,0,0));
@@ -131,8 +121,6 @@ public class OptimizerView implements View
 
         _panel.revalidate();
         _panel.repaint();
-
-        _advertisment.initialize();
 
         panel.revalidate();
         panel.repaint();
@@ -208,7 +196,6 @@ public class OptimizerView implements View
                         library.add(card, delta);
                     }
 
-                    //_useCase = new UseCaseOptimizeManaCurve(library, _cards.getFixedCards(),
                     _useCase = new UseCaseOptimizeManaCurveFine(library, _cards.getFixedCards(),
                             _parameters.getTurn(), builder, random, builder.getModel().buildDomain().size(), new MyProgressBar(), _data.getConfiguration());
                     _useCase.setConfigurationName(_parameters.getConfigurationName());
@@ -295,17 +282,10 @@ public class OptimizerView implements View
                     _panel.revalidate();
                     _panel.repaint();
                     _frame.getFrame().getGlassPane().repaint();
-
                 }
             };
-//            if (SwingUtilities.isEventDispatchThread())
-//            {
-//                runnable.run();
-//            }
-//            else
-//            {
-                SwingUtilities.invokeLater(runnable);
-            //}
+
+            SwingUtilities.invokeLater(runnable);
         }
     }
 }

@@ -1,7 +1,5 @@
 package com.dd.maths;
 
-import java.util.Iterator;
-
 /**
  * User: DD
  * Date: 02/12/13

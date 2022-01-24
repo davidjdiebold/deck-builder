@@ -25,8 +25,6 @@ public class Fader implements ActionListener
 
     public void actionPerformed(ActionEvent e)
     {
-        //On d�cide de r�duire l'opacit� du JDialog par 0,01f (car c'est du float)
-        //Bien entendu si l'opacit� est r�duite au maximum, on ferme le JDialog avec dispose()
         float opacity = AWTUtilities.getWindowOpacity(_dialog);
         if (_timeBeforeFade > 0)
         {

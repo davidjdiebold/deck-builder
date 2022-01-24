@@ -3,8 +3,6 @@ package com.dd.gui;
 
 public class Messages
 {
-    //<view or dialog>[.<sub-context>].<control-type>.<name>
-
     public final static String CARD_LIBRARY_NAME_BY_COST = " Cost Card";
 
     public final static String CARDDETAIL_LABEL_ATTACK = "Attack";

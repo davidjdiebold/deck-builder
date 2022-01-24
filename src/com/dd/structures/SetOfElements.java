@@ -25,14 +25,6 @@ public class SetOfElements<T>  implements Iterable<T>
         }
     }
 
-    public void addAll(Iterable<T> elements)
-    {
-        for(T element : elements)
-        {
-            add(element, 1);
-        }
-    }
-
     public boolean remove(T element)
     {
         Integer ini = _elements.get(element);
@@ -43,11 +35,6 @@ public class SetOfElements<T>  implements Iterable<T>
             return true;
         }
         return false;
-    }
-
-    public Collection<T> listElementsWithoutDuplicates()
-    {
-        return _elements.keySet();
     }
 
     @Override

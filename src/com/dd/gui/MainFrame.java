@@ -60,7 +60,6 @@ public class MainFrame
 
     private void processKey(final KeyEvent e)
     {
-        //HACK INDEXES
         if( e.getKeyCode() == KeyEvent.VK_TAB && ((e.getModifiers() & (KeyEvent.CTRL_MASK)) != 0) &&
             ((e.getModifiers() & (KeyEvent.SHIFT_MASK)) != 0))
         {
@@ -156,7 +155,6 @@ public class MainFrame
         _results = new OptimizerResultsView(_data, this);
         _views = new View[]{_optimizer, _results, _library};
 
-//        _menuBar = new MenuBar();
         _menuBar = new TabbedMenuBar(_frame, _data);
         _menuBar.registerTab("logoCog_black_96.png", "logoCog_black_96.png", new ShowView(_optimizer, "Curve Builder"));
         _menuBar.registerTab("scores.png", "scores.png", new ShowView(_results, "Constructed Curves"));
@@ -339,13 +337,6 @@ public class MainFrame
 
     private void sizeAndDisplay()
     {
-//        Dimension dim = new Dimension(640, 480);
-//        setResizable(false);
-//        setPreferredSize(dim);
-//        setMaximumSize(dim);
-//        setMinimumSize(dim);
-//        setSize(dim);
-        //toggleFullScreen();
         _frame.setLocationRelativeTo(null);
         _frame.setVisible(true);
     }
@@ -355,7 +346,6 @@ public class MainFrame
         _mainPanel.removeAll();
         _mainPanel.setLayout(new GridBagLayout());
         _mainPanel.add(_menuBar.getComponent(), new GridBagConstraints(0, 0, 1, 1, 1., 1., CENTER, BOTH, new Insets(0,0,0,0), 0, 0));
-//        _mainPanel.add(_currentView.getComponent(), new GridBagConstraints(0, 1, 1, 1, 1., 100., CENTER, BOTH, FINE_INSETS, 0, 0));
         _mainPanel.revalidate();
         _mainPanel.repaint();
         _frame.revalidate();
@@ -477,14 +467,6 @@ public class MainFrame
                     toggleFullScreen();
                     _windowClosedSilenced = false;
                 }
-            }
-        });
-        _frame.addComponentListener(new ComponentAdapter()
-        {
-            @Override
-            public void componentResized(final ComponentEvent e)
-            {
-                //_searchField.setVisible(getFrame().getSize().getWidth()>850);
             }
         });
         //TODO update barre

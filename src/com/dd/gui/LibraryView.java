@@ -19,8 +19,6 @@ import java.util.List;
 
 public class LibraryView implements View
 {
-
-    //De quoi en voir sans scrollbar � taille minimale
     private static final int MAX_CARDS = 19;
     private MainFrame _frame;
 

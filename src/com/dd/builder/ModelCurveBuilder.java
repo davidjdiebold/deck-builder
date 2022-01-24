@@ -16,6 +16,9 @@ public class ModelCurveBuilder implements CurveBuilder
     private double[] _lastParameters;
     private ModelScores _scores;
 
+    /**
+     * used by kryo
+     */
     public ModelCurveBuilder()
     {
     }

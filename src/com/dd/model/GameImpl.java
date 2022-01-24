@@ -49,8 +49,7 @@ public class GameImpl implements Game
 
         _playerB.getDeck().shuffle(_random);
         _playerB.drawCards(_configuration.getStartingPlayerInitialCards()+1);
-        //HACK PROBA ?
-        //DESACTIVE CAR CA MARCHE PAS
+        //Desactivated as it was not working as expected. No time to check...
         if(Math.random()<0.0 && _configuration.isHearthstone())
         {
             Card card = new CardFactory().newSpell("The Coin", 0, 1, 0);

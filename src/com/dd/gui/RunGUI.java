@@ -34,7 +34,6 @@ public class RunGUI
         }
         catch (Exception e)
         {
-            // If Nimbus is not available, you can set the GUI to another look and feel.
         }
 
         File prefFiles = new File("../data/prefs.txt");
@@ -88,8 +87,7 @@ public class RunGUI
         frame.add(home.getPanel());
 
 
-        //Pour la scrollbar
-        //frame.setSize(new Dimension(1024,800));
+        //Scrollbar
         frame.setSize(new Dimension(815,600));
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

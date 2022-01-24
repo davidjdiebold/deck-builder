@@ -89,7 +89,6 @@ public class GreedyCardPlayingAI implements PlayerAI
             double averageCost = 0.;
             for (int i = 0; i < player.getDeckCurve().getMaxCost(); i++)
             {
-                //HACK SIZE
                 int nbCardsOfCost = (int) player.getDeckCurve().getCount(i);
                 averagePower += _powers.serve(i, nbCardsOfCost) * nbCardsOfCost / _configuration.getDeckSize();
                 averageCost += nbCardsOfCost / _configuration.getDeckSize();
@@ -127,7 +126,7 @@ public class GreedyCardPlayingAI implements PlayerAI
     {
         toFill.clear();
         int manaAvailable = mana;
-        //approximation, on ne compte pas les cartes
+        //approximation, cards are not counted
         Collections.sort(player.getAllCardsInHand(), new CardComparatorByRate(game.getTurn(), _powers, _opponentCurve, _configuration));
         for (final Card next : player.getAllCardsInHand())
         {
