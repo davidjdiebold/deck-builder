@@ -1,0 +1,80 @@
+body {
+  background-image : url(img/tavern.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  overflow-y: scroll; 
+}
+
+.title {
+  padding-bottom : 18px;
+}
+
+.tagline {
+  margin : 0px 0px;
+  color : white;
+  font-family : "Lucida Grande";
+  font-size : 38px;
+  text-align : center;
+}
+
+.thumbnail {
+  border-radius : 15px;
+  margin : 5px;
+  width : 90%;
+  border-width: 1px;
+  border-style : solid;
+  border-color : black;
+}
+
+.aplat {
+  color : white;
+  border-width: 2px;
+  border-style : solid;
+  border-color : black;
+  border-radius : 15px;
+  background-color : rgba(153,119,170,0.6);
+}
+
+.features {
+  display : inline-block;
+  width : 25%;
+  margin : 10px 2%;
+  text-align: center;
+}
+
+.next {
+  background-color : #CC5522;
+  font-size : 30px;
+  line-height : 60px;
+  color : white;
+  float : left;
+  padding : 0px 20px;
+  margin-left : 2%;
+  border-radius : 15px;
+  text-decoration : none;
+  border-color : black;
+  border-style : solid;
+  border-width: 1px;
+}
+
+.tuto {
+  color : black;
+  display : inline-block;
+  height : 220px;
+  width : 330px;
+  margin : 10px 2%;
+  padding : 5px 5px;
+  font-size : 12px;
+  text-align : justify;
+  vertical-align: middle;
+}
+
+.tutoScreen {
+  border-radius : 15px;
+  border-color : black;
+  border-style : solid;
+  border-width: 1px;
+  height : 230px;
+  vertical-align: middle;  
+  margin : 10px 2%;
+}

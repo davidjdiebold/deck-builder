@@ -1,0 +1,156 @@
+.hidden {
+  visibility: hidden;
+}
+
+body {
+  background-image : url(img/tavern.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+.header {
+  text-align : center;
+}
+
+.header p {
+  color : white;
+  font-size : 80px;  
+  line-height : 0px;
+}
+
+.header p:before {
+  content:url('img/logoCog_96.png');
+  vertical-align: -8px;
+  padding: 0 20px 0 0;
+}
+
+.fillHeight {
+  height : 100%;
+}
+
+.myColumn {
+  width:70%;
+  margin : auto;
+  padding :2%;
+  background-color : rgba(0, 0, 0, 0.9);
+  color : rgba(220,220,220,0.9);
+  font-size : 1.2em;
+  text-align:justify;
+}
+
+.myColumn img {
+    display: block;
+    margin: 0 auto; 
+    width : 65%;
+    height : auto;
+    padding : 1%;
+}
+
+.mySlide {
+  height:450px;
+  padding : 1em;
+}
+
+.slideContent div {
+  margin : 10px;
+  padding : 10px;
+  width : 60%;  
+  height : 450px;
+}
+
+.slideContent p {
+  font-size : 0.7em;
+}
+
+.slideContent li {
+  font-size : 0.7em;
+}
+
+.contact {
+  font-size : 0.7em;
+  display : inline;
+}
+
+.slideContent img {
+  vertical-align:middle;  
+}
+
+.letsgo {
+  margin: 0 auto;
+  display: block;
+}
+
+.group {
+  display : inline-block;
+  margin : 10px;
+}
+
+a {
+  color : white;
+}
+
+.legal {
+  margin : 40px 20px;
+  color : rgba(200, 200, 200, 0.7);
+}
+
+.bkgBox {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/box_lowres.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/box_lowres.jpg);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/box_lowres.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/box_lowres.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/backgrounds/box_lowres.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/box_lowres.jpg);
+  background-size : contain;
+}
+
+.bkgShaman {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/shaman_lowres.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/shaman_lowres.jpg);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/shaman_lowres.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/shaman_lowres.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/backgrounds/shaman_lowres.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/shaman_lowres.jpg);
+  background-size : contain;
+}
+
+.bkgWarlock {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warlock_lowres.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warlock_lowres.jpg);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warlock_lowres.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warlock_lowres.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/backgrounds/warlock_lowres.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warlock_lowres.jpg);
+  background-size : contain;
+}
+
+
+.bkgWarrior {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warrior_lowres.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warrior_lowres.jpg);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warrior_lowres.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warrior_lowres.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/backgrounds/warrior_lowres.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/warrior_lowres.jpg);
+  background-size : contain;
+}
+
+.bkgRogue {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/rogue_lowres.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/rogue_lowres.jpg);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/rogue_lowres.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/rogue_lowres.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/backgrounds/rogue_lowres.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/rogue_lowres.jpg);
+  background-size : contain;
+}
+
+.bkgWorgen {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/worgen_lowres.jpg);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/worgen_lowres.jpg);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/worgen_lowres.jpg);
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/worgen_lowres.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(img/backgrounds/worgen_lowres.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/backgrounds/worgen_lowres.jpg);
+  background-size : contain;
+}

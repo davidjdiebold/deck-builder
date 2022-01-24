@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>     
+  <head>         
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <title>Deck Builder          
+    </title>              
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.flexbox.css" rel="stylesheet">
+    <link href="css/dkb.css" rel="stylesheet">
+    
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexbox.js"></script>
+    
+  </head>     
+
+  <body CLASS="fillHeight">
+    <div class="header">
+      <!--img src="img/logoCog.png" alt="" width="128px" height="128px"-->
+      <p class="title">Deck Builder</p>
+    </div>
+    <div class="myColumn">
+      
+              <h1>Welcome to Deck Builder !</h1>
+      
+              
+              <!--img src="img/screen1.png" class="thumb" alt=""-->
+              <div>
+                <p>Deckbuilder is a software that helps you to find-out the best mana curve for your deck. You can configure your play-style in the <strong>Curve Builder view</strong>. The following options are available : </p>
+                <ul>
+                  <li>The turn of game where your deck will reach its maximum power. Use a low value for an aggro deck, or a high value for a control deck.</li>
+                  <li>Computations precision. The more accurate, the more time to compute.</li>
+                  <li>Hero Power to use in simulations. For example, Warlock card drawing abilities can be taken into account in simulations.</li>
+                </ul>
+              </div>
+      
+              <img src="img/tuto_curvebuilder.png" alt="">
+      
+              
+              <div>
+                <p>You can impose some cards in the deck if you want to ! Just add them to the <strong>forced cards list</strong>. The mana curve of your deck will be adjusted based on this information. Also, card drawing abilities from fixed cards will be considered when computing the best mana curve.</p>
+              </div>
+      
+              <img src="img/tuto_forced.png" class="thumb" alt="">
+      
+              
+              <div>
+                <p>As soon as computations are ended, you will find the best mana curves for your deck in the <strong>Constructed Curves view</strong>.</p>
+              </div>
+      
+              <img src="img/tuto_results.png" class="thumb" alt="">
+      
+              
+              <div>
+                <p>You can also add some cards with given characteristics in the <strong>Library view</strong>, in order to use them in your deck. The most important things to consider when defining a card are the following :</p>
+                <ul>
+                  <li><strong>The mana cost</strong> of the card.</li>
+                  <li><strong>The card rating</strong> is used by the software in order to compute deck scores. The contribution of a card to the score is proportional to its rating, and is increased if the card is played early.</li>
+                  <li><strong>Cards Drawn</strong> are used by the software when the card is played. The amount of cards is immediately drawn by the player.</li>
+                </ul>
+                <p>When filling a deck with a given mana curve, Deck Builder fills mana costs with the cards with highest ratings. A card can be added twice to the deck.</p>
+              </div>
+            
+              <img src="img/tuto_library.png" class="thumb" alt="">
+            
+            <br>
+            <button type="button" class="btn btn-success btn-lg letsgo"><a href="next">Let's Go !</a></button>
+            <br><br><br>
+          
+    </div>
+  </body>
+</html>
